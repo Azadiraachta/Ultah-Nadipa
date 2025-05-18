@@ -1,6 +1,6 @@
 // Bintang acak warna variatif
 const colors = ['#ffffff', '#cceeff', '#e0e0ff'];
-for (let i = 0; i < 400; i++) {
+for (let i = 0; i < 800; i++) {
   const star = document.createElement("div");
   star.classList.add("star");
   star.style.top = Math.random() * 100 + "vh";
@@ -27,3 +27,13 @@ setTimeout(() => {
     origin: { y: 0.3 }
   });
 }, 1500);
+
+// Event listener for the celebrate button
+document.getElementById('celebrateBtn').addEventListener('click', () => {
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+});
+
