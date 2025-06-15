@@ -11,6 +11,10 @@ body {
   color: white;
   text-align: center;
   position: relative;
+  background: linear-gradient(-45deg, #1e90ff, #6a5acd, #00bfff, #8a2be2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+
 }
 
 .card {
@@ -75,6 +79,12 @@ p {
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -116,3 +126,19 @@ button:hover {
       margin-top: 20px;
   }
 }
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.8; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  top: 100%;
+  animation: float linear infinite;
+}
+
